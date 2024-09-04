@@ -4,6 +4,7 @@ import 'package:gas/view/auth/otp.dart';
 import 'package:gas/view/auth/profile.dart';
 import 'package:gas/view/auth/sign_in.dart';
 import 'package:gas/view/auth/sign_up.dart';
+import 'package:gas/view/home_screen/dettails_description.dart';
 import 'package:gas/view/home_screen/dettails_page.dart';
 import 'package:gas/view/screens/intro.dart';
 import 'package:gas/view/screens/splash.dart';
@@ -18,6 +19,8 @@ class Routes {
   static const String profile = "/profile-screen";
   static const String bottomNav = "/bottom-nav-screen";
   static const String dettails = "/dettails-screen";
+    static const String des = "/des-screen";
+
 }
 
 List<GetPage> pages = [
@@ -29,5 +32,7 @@ List<GetPage> pages = [
   GetPage(name: Routes.profile, page: () => ProfileScreen()),
   GetPage(name: Routes.bottomNav, page: () => BottomNavigationScreen()),
     GetPage(name: Routes.dettails, page: () => DettailsPage()),
+        GetPage(name: Routes.des, page: () => DettailsDescription()),
+
 
 ];

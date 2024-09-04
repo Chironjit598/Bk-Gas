@@ -4,6 +4,7 @@ import 'package:gas/controllers/sign_up_controller.dart';
 import 'package:gas/routes/routes.dart';
 import 'package:gas/utils/colors.dart';
 import 'package:gas/view/basae/custom_app_bar.dart';
+import 'package:gas/view/basae/custom_gradiant_background.dart';
 import 'package:gas/view/basae/custom_text_feild.dart';
 import 'package:get/get.dart';
 
@@ -30,7 +31,10 @@ class _SignUpState extends State<SignUp> {
         child: Form(
           key: _formKey,
           child: Container(
-            width: double.infinity,
+              decoration: customGradiantBackground(),
+          height: double.maxFinite,
+          width: double.infinity,
+
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -64,7 +68,7 @@ class _SignUpState extends State<SignUp> {
                           if (val.isEmpty) {
                             return "this feild can't empty";
                           }
-
+        
                           if (!val.contains(RegExp(r'\@'))) {
                             return 'enter a valid email address';
                           }
@@ -83,7 +87,7 @@ class _SignUpState extends State<SignUp> {
                           if (val.isEmpty) {
                             return "this feild can't empty";
                           }
-
+        
                           if (!val.contains(RegExp(r'\@'))) {
                             return 'enter a valid email address';
                           }
@@ -102,7 +106,7 @@ class _SignUpState extends State<SignUp> {
                           if (val.isEmpty) {
                             return "this feild can't empty";
                           }
-
+        
                           if (!val.contains(RegExp(r'\@'))) {
                             return 'enter a valid email address';
                           }
@@ -174,7 +178,7 @@ class _SignUpState extends State<SignUp> {
                             signUpController.toggleCheckBox(val!))),
                     Text(
                       """By creating an account, I accept the Terms
- & Conditions & Privacy Policy.""",
+         & Conditions & Privacy Policy.""",
                       style: TextStyle(
                         fontSize: 16.sp,
                         fontWeight: FontWeight.w400,

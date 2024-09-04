@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gas/view/basae/custom_gradiant_background.dart';
 import 'package:gas/view/bottom_nav/bottom_navigation.dart';
 import 'package:gas/controllers/profile_controller.dart';
 import 'package:gas/routes/routes.dart';
@@ -20,7 +21,9 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(title: "Fill Out Your Profile"),
       body: Container(
+        decoration: customGradiantBackground(),
         width: double.infinity,
+        height: double.infinity,
         child: SingleChildScrollView(
           child: Column(
             children: [
