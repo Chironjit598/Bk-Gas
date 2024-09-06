@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gas/view/bottom_nav/account_screen.dart';
-import 'package:gas/view/bottom_nav/cart_screen.dart';
-import 'package:gas/view/bottom_nav/home_screen.dart';
-import 'package:gas/view/bottom_nav/order_screen.dart';
 import 'package:gas/controllers/bottom_nav_controller.dart';
 import 'package:gas/utils/colors.dart';
 import 'package:gas/view/basae/custom_gradiant_background.dart';
@@ -32,6 +28,7 @@ class BottomNavigationScreen extends StatelessWidget {
                     showUnselectedLabels: true,
                     selectedItemColor: AppColors.whiteClr,
                     unselectedItemColor: AppColors.whiteClr,
+       
                     items: [
                       BottomNavigationBarItem(
                           backgroundColor: AppColors.primaryClr,

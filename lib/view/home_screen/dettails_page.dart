@@ -1,7 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gas/controllers/cart_controller.dart';
 import 'package:gas/controllers/dettails_page_controller.dart';
+import 'package:gas/model/cart_item_model.dart';
 import 'package:gas/routes/routes.dart';
 import 'package:gas/utils/colors.dart';
 import 'package:gas/view/basae/custom_app_bar.dart';
@@ -14,6 +16,7 @@ class DettailsPage extends StatelessWidget {
   DettailsPage({super.key});
   final Map<String, dynamic> product = Get.arguments;
   DettailsPageController dettailsPageController=Get.put(DettailsPageController());
+  CartController cartController=Get.put(CartController());
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +45,8 @@ class DettailsPage extends StatelessWidget {
                       color: Color(0xFF111111),
                     ),
                   ),
+
+
                   Row(
                     children: [
 
@@ -71,6 +76,8 @@ class DettailsPage extends StatelessWidget {
                    
                    ],
                   )
+                
+                
                 ],
               ),
               SizedBox(
@@ -139,7 +146,10 @@ class DettailsPage extends StatelessWidget {
                 height: 30.h,
               ),
 
-              customButton(title: "Add To Card", ontap: (){})
+              customButton(title: "Add To Card", ontap: (){
+                cartController.addItem(CartItemModel(img: product["img"], productName: product["name"], price: product["price"], weight: product["weight"],));
+
+              })
             ],
           ),
         ),
