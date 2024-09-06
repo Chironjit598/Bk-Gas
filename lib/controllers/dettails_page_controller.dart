@@ -8,7 +8,11 @@ class DettailsPageController extends GetxController {
   }
 
   void decreament(){
-    selectNumber--;
+    if (selectNumber>1) {
+      selectNumber--;
+      
+    }
+    
   }
   
 }
